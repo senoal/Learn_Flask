@@ -1,0 +1,17 @@
+<!doctype html>
+<title>Result</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=page>
+  <center>
+  <h1>Purchased Report</h1> <br>
+  <a href="/">Back to Home</a>
+  <a href="/purchased">Back to Purchased</a>
+  <td><a href="/getPurch">Download</a></td>
+  <!-- <a href="/download">Back to Options</a><br><br> -->
+  {% for table in tables %}
+    <h2>{{titles[loop.index]}}</h2>
+    
+    {{ table|safe }}
+  {% endfor %}
+</center>
+</div>

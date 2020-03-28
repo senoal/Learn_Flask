@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Clean</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"/>
+    <!-- <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}"> -->
+    <style>
+        table, th, td {
+          /* border: solid grey; */
+        }
+    </style>
+</head>
+<body>
+  <div class=page>
+    <center>
+    <h1>My Rental</h1>
+    <table>
+      <a href="/">Back to Home</a>
+      <h6>Format Data :</h6>
+        <tr>
+          <th>Customer</th>
+          <th>Type</th> 
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td>John</td>
+          <td>Avanza</td>
+          <td>500000</td>
+        </tr>
+        <tr>
+          <td>Tomy</td>
+          <td>Fortuner</td>
+          <td>1000000</td>
+        </tr>
+        <tr>
+          <td>Tina</td>
+          <td>Pajero</td>
+          <td>1500000</td>
+        </tr>
+      </table>
+
+    <form action="/transform" method="post" enctype="multipart/form-data">
+        <input type="file" name="data_file"/><br><br>
+        SELECT ALL<input type="checkbox" name="check_all"><br>
+        Total<input type="checkbox" name="check_nan">
+        Uppercase<input type="checkbox" name="check_up">
+        Normalize<input type="checkbox" name="check_nor">
+        <br>
+        <input type="submit" />
+    </form>
+    <br>
+    </center>
+  </div>
+</body>
+</html>

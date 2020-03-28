@@ -1,0 +1,16 @@
+<!doctype html>
+<title>Result</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"/>
+<div class=page>
+  <center>
+  <h1>Cleaning Result</h1>
+  <a href="/">Back to Home</a>
+  <a href="/getPlotCSV">Download</a>
+  <a href="/cleaning">Back to Clean</a><br>
+  {% for table in tables %}
+    <h2>{{titles[loop.index]}}</h2>
+    
+    {{ table|safe }}
+  {% endfor %}
+</center>
+</div>
